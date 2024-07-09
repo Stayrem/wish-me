@@ -1,0 +1,17 @@
+{
+  "id": 0,
+  "name": "Birthday",
+  "count": 10,
+  "previewSrc": "http://via.placeholder.com/640x360",
+  "description": "description text",
+  "list": [{
+    "name": "PlayStation 5",
+    "price": 50000,
+    "previewSrc": "http://via.placeholder.com/640x360"
+  },
+    {
+      "name": "Xbox Series X",
+      "price": 50000,
+      "previewSrc": "http://via.placeholder.com/640x360"
+    }]
+}

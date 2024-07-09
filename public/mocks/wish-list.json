@@ -1,0 +1,23 @@
+[
+  {
+  "id": 0,
+  "name": "Birthday",
+  "count": 10,
+  "previewSrc": "/",
+  "description": "description text"
+  },
+  {
+    "id": 1,
+    "name": "New Year",
+    "count": 10,
+    "previewSrc": "/",
+    "description": "description text"
+  },
+  {
+    "id": 2,
+    "name": "Wedding",
+    "count": 10,
+    "previewSrc": "/",
+    "description": "description text"
+  }
+]

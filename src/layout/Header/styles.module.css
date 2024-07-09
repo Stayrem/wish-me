@@ -1,0 +1,12 @@
+.header {
+    display: flex;
+    align-items: center;
+    padding: 10px 20px;
+    background: var(--bg_color, #eee);
+}
+
+.text {
+    color: var(--text_color, #333);
+    margin-left: 15px;
+    font-size: 18px;
+}
