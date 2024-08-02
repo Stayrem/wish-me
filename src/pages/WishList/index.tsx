@@ -1,37 +1,46 @@
-import { Avatar, List, Typography, Button } from 'antd';
-import { PlusOutlined } from '@ant-design/icons';
 import { useGate, useUnit } from 'effector-react';
-import { $currentWishList, CurrentWishListGate } from '../../models/current-wish-list';
+import { $currentWishlist, CurrentWishlistGate } from '../../models/current-wish-list';
 import css from './styles.module.css';
+import {useIntl} from "react-intl";
+import {NavLink, useNavigate} from "react-router-dom";
+import {Button, Skeleton, Typography} from "antd";
+import dogIcon from "../../images/icons/dog.svg";
+import {StatusDict} from "../../models/interfaces";
 
-export const WishList = () => {
-    const currentWishList = useUnit($currentWishList);
-    useGate(CurrentWishListGate);
+export const Wishlist = () => {
+    const currentWishlist = useUnit($currentWishlist);
+    useGate(CurrentWishlistGate);
+    const intl = useIntl();
+    const navigate = useNavigate();
     return (
-        <>
-            <div className={css.header}>
-                <Avatar size={100} src={currentWishList.data?.previewSrc} />
-                <Typography.Text className={css.text}>{currentWishList.data?.name}</Typography.Text>
-            </div>
-            <Typography.Text>Список подарков</Typography.Text>
-            <div className={css.wrapper}>
-                <Button className={css.add_btn} type="link" icon={<PlusOutlined />}>Добавить</Button>
-                <List
-                    dataSource={currentWishList.data?.list || undefined}
-                    renderItem={(item) => (
-                        <div className={css.card}>
-                            <div className={css.card_left}>
-                                <img className={css.card_left__img} src={item.previewSrc || ''} alt={''}/>
-                            </div>
-                            <div className={css.card_right}>
-                                <Typography.Text className={css.card_right__name}>{item.name}</Typography.Text>
-                                <Typography.Text className={css.card_right__price}>{item.price}</Typography.Text>
-                            </div>
-                        </div>
-                    )}
-                />
-            </div>
-
-        </>
+      <>
+          <div className={css.wrapper}>
+              <Typography.Title className={css.title} level={3}>{currentWishlist.data?.name}</Typography.Title>
+              <div className={css.scroller}>
+                  {currentWishlist.status === 'SUCCESS' && currentWishlist.data.list.length === 0 && (
+                    <div className={css.empty}>
+                        <img src={dogIcon} width="150" alt=""/>
+                        <Typography.Text>{intl.formatMessage({id: 'Wishlists.Empty'})}</Typography.Text>
+                    </div>
+                  )}
+                  {currentWishlist.status === 'SUCCESS' && currentWishlist.data.list.length > 0 && (
+                    <div className={css.list}>
+                      {currentWishlist.data.list.map((it) => (
+                        <NavLink className={css.listItem} to={`/wishlists/${currentWishlist.data.id}/${it.id}`}>
+                          <div className={css.listImage} style={{backgroundImage: `url(${it.previewSrc})`}}/>
+                          <Typography.Title className={css.listTitle} level={5}>{it.name}</Typography.Title>
+                          <Typography.Text type="secondary" className={css.listText}>{it.price}</Typography.Text>
+                        </NavLink>
+                      ))}
+                    </div>
+                  )}
+                  <Skeleton title={false} loading={currentWishlist.status === StatusDict.PENDING} active />
+                  <Skeleton title={false} loading={currentWishlist.status === StatusDict.PENDING} active />
+                  <Skeleton title={false} loading={currentWishlist.status === StatusDict.PENDING} active />
+                  <Skeleton title={false} loading={currentWishlist.status === StatusDict.PENDING} active />
+              </div>
+          </div>
+          <Button onClick={() => navigate(`/wishlists/${currentWishlist.data?.id}/create`)} size="large" className={css.createBtn}>{intl.formatMessage({ id: 'Action.AddItem' })}</Button>
+      </>
     )
 }

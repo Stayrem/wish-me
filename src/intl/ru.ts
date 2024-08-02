@@ -1,0 +1,20 @@
+// eslint-disable-next-line import/no-anonymous-default-export
+export default {
+  "Title.Wishlists": "Вишлисты",
+  "Title.WishlistCreate": "Создание вишлиста",
+  "Title.WishlistItemAdd": "Добавление подарка",
+  "Title.WishlistsShared": "Вишлисты друзей",
+  "Menu.Wishlists": "Вишлисты",
+  "Menu.Profile": "Профиль",
+  "Action.CreateWishlist": "Создать Вишлист",
+  "Wishlists.Empty": "У вас пока нет вишлистов",
+  "Action.SaveWishlist": "Сохранить",
+  "Form.Wishlist.Title": "Название вишлиста",
+  "Form.Wishlist.Title.Placeholder": "Без названия",
+  "Form.Wishlist.Description": "Описание",
+  "Form.Wishlist.Description.Placeholder": "Опционально",
+  "Action.AddItem": "Добавить",
+  "Form.AddItem.Url": "URL",
+  "Form.AddItem.Url.Placeholder": "example.com",
+  "Form.AddItem.Name": "Название",
+}

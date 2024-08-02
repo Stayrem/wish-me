@@ -1,26 +1,27 @@
 import React from 'react';
-import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-import { Header } from './layout/Header';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import css from './styles.module.css';
-import { Home } from './pages/Home';
-import { WishList } from './pages/WishList';
+import { Wishlists} from './pages/Wishlists';
+import { WishlistCreate } from './components/WishlistCreate';
+import {Menu} from "./layout/Menu";
+import {Wishlist} from "./pages/WishList";
 
 function App() {
-const router = createBrowserRouter([
-    {
-      path: "/",
-      element: <Home />,
-    },
-      {
-          path: '/wishlist/:id',
-          element: <WishList />,
-      },
-  ]);
+
   return (
     <div className={css.app}>
-      <Header />
       <div className={css.wrapper}>
-        <RouterProvider router={router} />
+        <BrowserRouter>
+          <div className={css.main}>
+            <Routes>
+              <Route path="/wishlists" element={<Wishlists />} />
+              <Route path="/wishlists/create" element={<WishlistCreate />} />
+              <Route path="/wishlist/:id" element={<Wishlist />} />
+              <Route path="/wishlists/:id/add" element={<Wishlist />} />
+            </Routes>
+          </div>
+          <Menu />
+        </BrowserRouter>
       </div>
     </div>
   );

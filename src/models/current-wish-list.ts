@@ -1,50 +1,50 @@
 import { createStore, createEffect, sample } from 'effector';
 import { StatusDict } from './interfaces';
-import { WishListItem } from './wish-lists';
-import { getCurrentWishList } from '../api';
+import { WishlistItem } from './wish-lists';
+import { getCurrentWishlist } from '../api';
 import { createGate } from 'effector-react';
 
-export interface CurrentWishList extends WishListItem {
-    list: { name: string; previewSrc: string | null; price: number; }[]
+export interface CurrentWishlist extends WishlistItem {
+    list: { id: string; name: string; previewSrc: string | null; price: number; }[]
 }
 
-interface CurrentWishListFetched {
-    data: CurrentWishList;
+interface CurrentWishlistFetched {
+    data: CurrentWishlist;
     status: typeof StatusDict.SUCCESS;
 }
-interface CurrentWishListUnFetched {
+interface CurrentWishlistUnFetched {
     data: null;
     status: typeof StatusDict.NONE | typeof StatusDict.FAILED | typeof StatusDict.PENDING;
 }
 
-const defaultWishListsState: CurrentWishListUnFetched = {
+const defaultWishlistsState: CurrentWishlistUnFetched = {
     data: null,
     status: StatusDict.NONE,
 }
 
-export const CurrentWishListGate = createGate<string>();
+export const CurrentWishlistGate = createGate<string>();
 
-export const $currentWishList = createStore<CurrentWishListFetched | CurrentWishListUnFetched>(defaultWishListsState).reset(CurrentWishListGate.close);
-const getCurrentWishListFx = createEffect(getCurrentWishList);
+export const $currentWishlist = createStore<CurrentWishlistFetched | CurrentWishlistUnFetched>(defaultWishlistsState).reset(CurrentWishlistGate.close);
+const getCurrentWishlistFx = createEffect(getCurrentWishlist);
 sample({
-    clock: CurrentWishListGate.open,
-    target: getCurrentWishListFx,
+    clock: CurrentWishlistGate.open,
+    target: getCurrentWishlistFx,
 });
 
 sample({
-    clock: getCurrentWishListFx.pending,
+    clock: getCurrentWishlistFx.pending,
     fn: () => ({ data: null, status: StatusDict.PENDING }),
-    target: $currentWishList,
+    target: $currentWishlist,
 });
 
 sample({
-    clock: getCurrentWishListFx.doneData,
+    clock: getCurrentWishlistFx.doneData,
     fn: (data) => ({ data, status: StatusDict.SUCCESS }),
-    target: $currentWishList,
+    target: $currentWishlist,
 });
 
 sample({
-    clock: getCurrentWishListFx.fail,
+    clock: getCurrentWishlistFx.fail,
     fn: () => ({ data: null, status: StatusDict.FAILED }) ,
-    target: $currentWishList,
+    target: $currentWishlist,
 });
