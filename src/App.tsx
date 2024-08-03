@@ -1,14 +1,23 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import {BrowserRouter, Route, Routes} from 'react-router-dom';
 import css from './styles.module.css';
 import { Wishlists} from './pages/Wishlists';
 import { WishlistCreate } from './components/WishlistCreate';
 import {Menu} from "./layout/Menu";
 import {Wishlist} from "./pages/WishList";
+import { ConfigProvider, theme } from "antd";
+
+const { defaultAlgorithm, darkAlgorithm } = theme;
 
 function App() {
-
+  const [theme, setTheme] = useState(window.Telegram.WebApp.colorScheme)
+  useEffect(() => {
+    Telegram.WebApp.onEvent('themeChanged', () => setTheme(window.Telegram.WebApp.colorScheme));
+  }, [])
   return (
+    <ConfigProvider theme={{
+      algorithm: theme === 'light' ? darkAlgorithm : defaultAlgorithm,
+    }} >
     <div className={css.app}>
       <div className={css.wrapper}>
         <BrowserRouter>
@@ -24,6 +33,7 @@ function App() {
         </BrowserRouter>
       </div>
     </div>
+    </ConfigProvider>
   );
 }
 
