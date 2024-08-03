@@ -6,12 +6,15 @@ import { WishlistCreate } from './components/WishlistCreate';
 import {Menu} from "./layout/Menu";
 import {Wishlist} from "./pages/WishList";
 import { ConfigProvider, theme } from "antd";
+import { redirect } from "react-router-dom";
 
 const { defaultAlgorithm, darkAlgorithm } = theme;
 
 function App() {
   const [theme, setTheme] = useState(window.Telegram.WebApp.colorScheme)
   useEffect(() => {
+    redirect('/wishlists');
+    window.Telegram.WebApp.expand();
     Telegram.WebApp.onEvent('themeChanged', () => setTheme(window.Telegram.WebApp.colorScheme));
   }, [])
   return (
