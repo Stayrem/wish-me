@@ -19,7 +19,7 @@ function App() {
   }, [])
   return (
     <ConfigProvider theme={{
-      algorithm: theme === 'light' ? darkAlgorithm : defaultAlgorithm,
+      algorithm: theme === 'dark' ? darkAlgorithm : defaultAlgorithm,
     }} >
     <div className={css.app}>
       <div className={css.wrapper}>
