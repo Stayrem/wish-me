@@ -14,3 +14,5 @@ export const PAGES = [
 		pathname: '/profile',
 	}
 ] as const;
+
+export const BOT_URL = 'https://t.me/wishmegiftbot'

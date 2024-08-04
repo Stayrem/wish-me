@@ -9,7 +9,7 @@ export const Menu = () => {
 	return (
 		<div className={css.menu}>
 			{PAGES.map((page) => (
-				<NavLink className={css.menuBtn} to={page.pathname}>
+				<NavLink key={page.pathname} className={css.menuBtn} to={page.pathname}>
 					<Button size="large" type="text" icon={location.pathname.includes(page.pathname) ? page.iconActive : page.icon} />
 					<Typography.Text className={css.menuName} >{intl.formatMessage({ id: page.name })}</Typography.Text>
 				</NavLink>

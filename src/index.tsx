@@ -20,8 +20,9 @@ function loadLocaleData(locale: string) {
       return en
   }
 }
+console.log(lang)
 root.render(
-    <IntlProvider messages={loadLocaleData(lang)} locale={lang} defaultLocale="en">
+    <IntlProvider messages={loadLocaleData(lang)} locale={lang} defaultLocale="en-US">
         <App />
     </IntlProvider>
 );

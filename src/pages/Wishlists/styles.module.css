@@ -4,19 +4,6 @@
     margin-bottom: 20px;
 }
 
-.wrapper {
-    display: flex;
-    flex-direction: column;
-    height: calc(100% - 50px);
-    overflow: hidden;
-}
-
-.scroller {
-    margin-bottom: 20px;
-    max-height: 100%;
-    overflow-y: auto;
-}
-
 .empty {
     display: flex;
     flex-direction: column;

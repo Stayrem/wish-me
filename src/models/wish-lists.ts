@@ -1,34 +1,16 @@
 import {createEffect, createStore, sample} from 'effector';
 import { createGate } from 'effector-react';
-import { StatusDict } from './interfaces';
+import {StatusDict, WishlistStoreFetched, Unfetched} from './interfaces';
 import { getWishlist } from '../api';
 
-export interface WishlistItem {
-    id: number;
-    name: string;
-    count: number;
-    previewSrc: string | null;
-    description: string | null;
-    createdAt: number;
-}
-
-interface WishlistStoreFetched {
-  data: WishlistItem[];
-  status: typeof StatusDict.SUCCESS;
-}
-interface WishlistStoreUnFetched {
-    data: null;
-    status: typeof StatusDict.NONE | typeof StatusDict.FAILED | typeof StatusDict.PENDING;
-}
-
-const defaultWishlistsState: WishlistStoreUnFetched = {
+const defaultWishlistsState: Unfetched = {
     data: null,
     status: StatusDict.NONE,
 }
 
 export const WishlistsGate = createGate<string>();
 
-export const $wishListsStore = createStore<WishlistStoreUnFetched | WishlistStoreFetched>(defaultWishlistsState).reset(WishlistsGate.close);
+export const $wishListsStore = createStore<Unfetched | WishlistStoreFetched>(defaultWishlistsState).reset(WishlistsGate.close);
 const getWishlistFx = createEffect(getWishlist);
 
 sample({

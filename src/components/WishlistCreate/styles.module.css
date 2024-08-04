@@ -17,3 +17,7 @@
     flex-direction: column;
     overflow: hidden;
 }
+
+.datepicker {
+    width: 100%;
+}

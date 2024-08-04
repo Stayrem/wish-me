@@ -1,5 +1,4 @@
 export const getLang = () => {
-	if (navigator.languages !== undefined)
-		return navigator.languages[0];
-	return navigator.language;
+	const lang = Telegram.WebApp.initDataUnsafe.user?.language_code || '';
+	return lang === 'ru' ? 'ru-RU' : 'en-US'
 }

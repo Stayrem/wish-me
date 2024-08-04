@@ -9,49 +9,80 @@
       "id": 0,
       "name": "PlayStation 5",
       "price": 50000,
-      "previewSrc": "https://plus.unsplash.com/premium_photo-1674978723656-6b0ee188a014?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "href": "https://www.mvideo.ru/products/igrovaya-pristavka-sony-playstation-5-slim-1tb-blu-ray-edition-cfi-2000-a01-40079650",
+      "previewSrc": "https://plus.unsplash.com/premium_photo-1674978723656-6b0ee188a014?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "bookedBy": 0,
+      "description": "PlayStation 5 готова раскрыть возможности некстгена благодаря впечатляющим характеристикам, принципиально отличающимся от консолей прошлого поколения."
     },
     {
       "id": 1,
       "name": "Xbox Series X",
       "price": 50000,
-      "previewSrc": "https://plus.unsplash.com/premium_photo-1674978723656-6b0ee188a014?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "href": "https://www.mvideo.ru/products/igrovaya-pristavka-sony-playstation-5-slim-1tb-blu-ray-edition-cfi-2000-a01-40079650",
+      "previewSrc": "https://plus.unsplash.com/premium_photo-1674978723656-6b0ee188a014?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "PlayStation 5 готова раскрыть возможности некстгена благодаря впечатляющим характеристикам, принципиально отличающимся от консолей прошлого поколения.",
+      "bookedBy": 0,
+      "booked": false
     },
     {
-      "id": 0,
+      "id": 2,
       "name": "PlayStation 5",
       "price": 50000,
-      "previewSrc": "https://plus.unsplash.com/premium_photo-1674978723656-6b0ee188a014?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "href": "https://www.mvideo.ru/products/igrovaya-pristavka-sony-playstation-5-slim-1tb-blu-ray-edition-cfi-2000-a01-40079650",
+      "previewSrc": "https://plus.unsplash.com/premium_photo-1674978723656-6b0ee188a014?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "PlayStation 5 готова раскрыть возможности некстгена благодаря впечатляющим характеристикам, принципиально отличающимся от консолей прошлого поколения.",
+      "bookedBy": 0,
+      "booked": true
     },
     {
-      "id": 1,
+      "id": 3,
       "name": "Xbox Series X",
       "price": 50000,
-      "previewSrc": "https://plus.unsplash.com/premium_photo-1674978723656-6b0ee188a014?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "href": "https://www.mvideo.ru/products/igrovaya-pristavka-sony-playstation-5-slim-1tb-blu-ray-edition-cfi-2000-a01-40079650",
+      "previewSrc": "https://plus.unsplash.com/premium_photo-1674978723656-6b0ee188a014?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "PlayStation 5 готова раскрыть возможности некстгена благодаря впечатляющим характеристикам, принципиально отличающимся от консолей прошлого поколения.",
+      "bookedBy": 0,
+      "booked": false
     },
     {
-      "id": 0,
+      "id": 4,
       "name": "PlayStation 5",
       "price": 50000,
-      "previewSrc": "https://plus.unsplash.com/premium_photo-1674978723656-6b0ee188a014?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "href": "https://www.mvideo.ru/products/igrovaya-pristavka-sony-playstation-5-slim-1tb-blu-ray-edition-cfi-2000-a01-40079650",
+      "previewSrc": "https://plus.unsplash.com/premium_photo-1674978723656-6b0ee188a014?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "PlayStation 5 готова раскрыть возможности некстгена благодаря впечатляющим характеристикам, принципиально отличающимся от консолей прошлого поколения.",
+      "bookedBy": 0,
+      "booked": true
     },
     {
-      "id": 1,
+      "id": 5,
       "name": "Xbox Series X",
       "price": 50000,
-      "previewSrc": "https://plus.unsplash.com/premium_photo-1674978723656-6b0ee188a014?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "href": "https://www.mvideo.ru/products/igrovaya-pristavka-sony-playstation-5-slim-1tb-blu-ray-edition-cfi-2000-a01-40079650",
+      "previewSrc": "https://plus.unsplash.com/premium_photo-1674978723656-6b0ee188a014?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "PlayStation 5 готова раскрыть возможности некстгена благодаря впечатляющим характеристикам, принципиально отличающимся от консолей прошлого поколения.",
+      "bookedBy": 0,
+      "booked": true
     },
     {
-      "id": 0,
+      "id": 6,
       "name": "PlayStation 5",
       "price": 50000,
-      "previewSrc": "https://plus.unsplash.com/premium_photo-1674978723656-6b0ee188a014?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "href": "https://www.mvideo.ru/products/igrovaya-pristavka-sony-playstation-5-slim-1tb-blu-ray-edition-cfi-2000-a01-40079650",
+      "previewSrc": "https://plus.unsplash.com/premium_photo-1674978723656-6b0ee188a014?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "PlayStation 5 готова раскрыть возможности некстгена благодаря впечатляющим характеристикам, принципиально отличающимся от консолей прошлого поколения.",
+      "bookedBy": 0,
+      "booked": false
     },
     {
-      "id": 1,
+      "id": 7,
       "name": "Xbox Series X",
       "price": 50000,
-      "previewSrc": "https://plus.unsplash.com/premium_photo-1674978723656-6b0ee188a014?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+      "href": "https://www.mvideo.ru/products/igrovaya-pristavka-sony-playstation-5-slim-1tb-blu-ray-edition-cfi-2000-a01-40079650",
+      "previewSrc": "https://plus.unsplash.com/premium_photo-1674978723656-6b0ee188a014?q=80&w=3542&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+      "description": "PlayStation 5 готова раскрыть возможности некстгена благодаря впечатляющим характеристикам, принципиально отличающимся от консолей прошлого поколения.",
+      "bookedBy": 0,
+      "booked": true
     }
   ]
 }
