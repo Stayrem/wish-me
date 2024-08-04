@@ -5,8 +5,6 @@ import { $wishListsStore, WishlistsGate } from '../../models/wish-lists';
 import { StatusDict } from '../../models/interfaces';
 import css from './styles.module.css';
 import {Link, useNavigate} from "react-router-dom";
-import { EditOutlined } from "@ant-design/icons";
-import dogIcon from '../../images/icons/dog.svg';
 import {PageWrapper} from "../../layout/PageWrapper";
 import {WishlistItem} from "../../components/WishlistItem";
 import {$sharedWishListsStore, SharedWishlistsGate} from "../../models/shared-wish-lists";

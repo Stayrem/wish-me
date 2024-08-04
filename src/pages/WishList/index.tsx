@@ -35,7 +35,7 @@ export const Wishlist = () => {
                   )}
         </PageWrapper>
         {currentWishlist.status === 'SUCCESS' && data && data.list.length > 0 && (
-          <Button size="large" className={css.createBtn} onClick={() => window.Telegram.WebApp.openLink(shareLink)}><img src={telegram} width={20} />{intl.formatMessage({ id: 'Share.Telegram' })}</Button>
+          <Button size="large" className={css.createBtn} onClick={() => window.Telegram.WebApp.openLink(shareLink)}><img alt="" src={telegram} width={20} />{intl.formatMessage({ id: 'Share.Telegram' })}</Button>
         )}
         <Button onClick={() => navigate(`/wishlists/${data?.id}/create`)} size="large" className={css.createBtn}>{intl.formatMessage({ id: 'Action.AddItem' })}</Button>
       </>
