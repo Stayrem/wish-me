@@ -39,3 +39,21 @@ export interface WishlistStoreFetched {
     data: WishlistItemProps[];
     status: typeof StatusDict.SUCCESS;
 }
+
+export interface OgData {
+    name?: string;
+    description?: string;
+    previewSrc?: string;
+}
+
+export type AddItemRs = {
+    name: string;
+    url: string;
+    description?: string;
+    price?: string;
+}
+
+export interface AddItemFetched {
+    data: OgData
+    status: typeof StatusDict.SUCCESS
+}

@@ -10,7 +10,7 @@ export const AddItem = () => {
 	const { handleSubmit, control } = useForm<AddItemFields>();
 	const onSubmit = (data: AddItemFields) => console.log(data);
 	return (
-		<PageWrapper title={intl.formatMessage({id: 'Title.WishlistCreate'})} isLoading={false}>
+		<PageWrapper title={intl.formatMessage({id: 'Title.WishlistItemAdd'})} isLoading={false}>
 			<form onSubmit={handleSubmit(onSubmit)}>
 				<div className={css.field}>
 					<Typography.Text className={css.label}>{intl.formatMessage({id: 'Form.Wishlist.Title'})}</Typography.Text>
